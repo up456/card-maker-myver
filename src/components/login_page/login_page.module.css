@@ -1,0 +1,13 @@
+.loginBackgroundColor {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: rgba(0, 0, 0, 0.3);
+  width: 100vw;
+  height: 100vh;
+}
+.loginContainer {
+  width: 40%;
+  min-width: 25rem;
+  background: orange;
+}
