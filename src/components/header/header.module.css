@@ -1,7 +1,7 @@
-@value makerBlue, makerWhite from '../../common/colors.css';
+@value makerGreen, makerWhite, makerBlack from '../../common/colors.css';
 
 .header {
-  background-color: makerBlue;
+  background-color: makerGreen;
   padding: 0.4em;
 }
 
@@ -17,6 +17,10 @@
   position: absolute;
   right: 0;
   color: makerWhite;
+  background-color: makerBlack;
+  padding: 0.5em;
+  border-radius: 20%;
+  cursor: pointer;
 }
 
 .headerTitle {

@@ -4,15 +4,15 @@ import Header from '../header/header';
 import Footer from '../footer/footer';
 import Login from '../login/login';
 
-const LoginPage = (props) => {
+const LoginPage = ({ authService }) => {
   return (
-    <div className={styles.loginBackgroundColor}>
+    <section className={styles.loginBackgroundColor}>
       <div className={styles.loginContainer}>
         <Header />
-        <Login />
+        <Login authService={authService} />
         <Footer />
       </div>
-    </div>
+    </section>
   );
 };
 
