@@ -1,0 +1,25 @@
+@value makerGrey, makerWhite, makerGreen, makerLightGrey from '/src/common/colors.css';
+@value mediaQuery from '/src/common/size.css';
+.makerBackground {
+  display: flex;
+  justify-content: center;
+  background-color: makerGrey;
+  height: 100vh;
+}
+.makerPage {
+  min-width: 62em;
+  max-width: 85%;
+  height: 84%;
+}
+.makerContents {
+  display: flex;
+  flex-wrap: wrap;
+  height: 100%;
+  text-align: center;
+}
+
+@media (max-width: mediaQuery) {
+  .makerPage {
+    min-width: 100%;
+  }
+}

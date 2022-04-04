@@ -1,0 +1,17 @@
+@value makerWhite, makerGreen from '/src/common/colors.css';
+@value mediaQuery from '/src/common/size.css';
+
+.contentTitle {
+  color: makerGreen;
+}
+.cardPreview {
+  background-color: makerWhite;
+  width: 50%;
+  border-left: 1px solid makerLightGrey;
+}
+
+@media (max-width: mediaQuery) {
+  .cardPreview {
+    width: 100%;
+  }
+}

@@ -7,7 +7,11 @@ const Header = ({ onLogout }) => {
     <header className={styles.header}>
       <div className={styles.headerTop}>
         <img className={styles.logoImage} src={logoImage} alt="사진" />
-        {onLogout && <div className={styles.logoutBtn}>logout</div>}
+        {onLogout && (
+          <div className={styles.logoutBtn} onClick={onLogout}>
+            logout
+          </div>
+        )}
       </div>
       <div className={styles.headerTitle}>Business Card Maker</div>
     </header>
