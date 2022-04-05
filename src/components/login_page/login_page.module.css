@@ -1,8 +1,5 @@
 @value makerGrey from '../../common/colors.css';
 
-* {
-  box-sizing: border-box;
-}
 .loginBackgroundColor {
   display: flex;
   justify-content: center;

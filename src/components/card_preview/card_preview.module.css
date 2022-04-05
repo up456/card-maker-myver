@@ -1,4 +1,4 @@
-@value makerWhite, makerGreen from '/src/common/colors.css';
+@value makerWheat, makerShadow, makerWhite, makerGree, makerLightGrey, makerBlack from '/src/common/colors.css';
 @value mediaQuery from '/src/common/size.css';
 
 .contentTitle {
@@ -10,8 +10,56 @@
   border-left: 1px solid makerLightGrey;
 }
 
+.previewList {
+  list-style: none;
+  width: 80%;
+  margin: auto;
+  padding: 0;
+}
+.previewItem {
+  background-color: makerBlack;
+  display: flex;
+  border-radius: 10px;
+  box-shadow: 4px 4px 3px makerShadow;
+  padding: 1.5em 1em;
+  margin-bottom: 0.5em;
+}
+.previeItemImage {
+  width: 6em;
+  flex: 1;
+  border-radius: 50%;
+}
+.previewItemDescription {
+  color: makerWhite;
+  flex: 3;
+  text-align: left;
+  padding: 0.5em;
+  margin-left: 1em;
+}
+.name {
+  font-size: 1.2rem;
+}
+.company {
+  font-size: 0.8rem;
+}
+.line {
+  width: 100%;
+  height: 0.5px;
+  background-color: makerWheat;
+  margin: 0.3em 0;
+}
+.etc {
+  font-size: 0.6rem;
+  margin-bottom: 0.2em;
+}
+.message {
+  font-size: 0.6rem;
+  margin-top: 0.7em;
+}
+
 @media (max-width: mediaQuery) {
   .cardPreview {
     width: 100%;
+    border: none;
   }
 }

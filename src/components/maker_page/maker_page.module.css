@@ -4,7 +4,7 @@
   display: flex;
   justify-content: center;
   background-color: makerGrey;
-  height: 100vh;
+  height: 100%;
 }
 .makerPage {
   min-width: 62em;
