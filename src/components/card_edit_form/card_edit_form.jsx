@@ -17,9 +17,9 @@ const CardEditForm = ({ card }) => {
         value={company}
       />
       <select name="theme" className={styles.select}>
-        <option value="light">Light</option>
-        <option value="dark">Dark</option>
-        <option value="colorful">Colorful</option>
+        <option value="light">light</option>
+        <option value="dark">dark</option>
+        <option value="colorful">colorful</option>
       </select>
       <input type="text" name="title" className={styles.input} value={title} />
       <input type="text" name="email" className={styles.input} value={email} />
@@ -29,7 +29,7 @@ const CardEditForm = ({ card }) => {
         value={message}
       ></textarea>
       <div className={styles.fileInput}>
-        <ImageFileInput />
+        <ImageFileInput fileName={fileName} />
       </div>
       <Button name="delete" onClick={onSubmit} />
     </form>

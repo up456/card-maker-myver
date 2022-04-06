@@ -19,7 +19,7 @@ const Maker_page = ({ authService }) => {
       id: '1',
       name: '용석',
       company: '카카오',
-      theme: 'Dark',
+      theme: 'dark',
       title: '프론트엔드',
       email: '4up456@naver.com',
       message: '안녕하세요. 존잘남 박용석입니다.',
@@ -30,25 +30,30 @@ const Maker_page = ({ authService }) => {
       id: '2',
       name: '트위치',
       company: '라이엇',
-      theme: 'Light',
+      theme: 'light',
       title: '원거리 암살자',
       email: 'tiwitch@naver.com',
       message: '깜짝 놀랬징?',
       imageURL: null,
-      imageName: 'default',
+      fileName: 'default',
     },
     {
       id: '3',
       name: '아이유',
       company: '로엔',
-      theme: 'Colorful',
+      theme: 'colorful',
       title: '아이돌 여가수',
       email: 'iu@naver.com',
       message: '존예 여가수~!',
       imageURL: null,
-      imageName: 'default',
+      fileName: 'default',
     },
   ]);
+
+  const onAdd = (newCard) => {
+    let newCards = [...cards, newCard];
+    setCards(newCards);
+  };
 
   useEffect(() => {
     authService.onAuthChange((user) => {
@@ -63,7 +68,7 @@ const Maker_page = ({ authService }) => {
       <section className={styles.makerPage}>
         <Header onLogout={onLogout} />
         <section className={styles.makerContents}>
-          <CardMaker cards={cards} />
+          <CardMaker cards={cards} onAdd={onAdd} />
           <CardPreview cards={cards} />
         </section>
         <Footer />

@@ -22,11 +22,11 @@ const Card = ({ card }) => {
 
 function selectColor(theme) {
   switch (theme) {
-    case 'Dark':
+    case 'dark':
       return styles.dark;
-    case 'Light':
+    case 'light':
       return styles.light;
-    case 'Colorful':
+    case 'colorful':
       return styles.colorful;
     default:
       throw new Error(`unknown theme ${theme}`);
