@@ -14,8 +14,8 @@ const Maker_page = ({ authService }) => {
     navigate('/');
   };
 
-  const [cards, setCards] = useState([
-    {
+  const [cards, setCards] = useState({
+    1: {
       id: '1',
       name: '용석',
       company: '카카오',
@@ -26,7 +26,7 @@ const Maker_page = ({ authService }) => {
       fileURL: '/images/logo.png',
       fileName: 'default',
     },
-    {
+    2: {
       id: '2',
       name: '트위치',
       company: '라이엇',
@@ -37,7 +37,7 @@ const Maker_page = ({ authService }) => {
       imageURL: null,
       fileName: 'default',
     },
-    {
+    3: {
       id: '3',
       name: '아이유',
       company: '로엔',
@@ -48,12 +48,7 @@ const Maker_page = ({ authService }) => {
       imageURL: null,
       fileName: 'default',
     },
-  ]);
-
-  const onAdd = (newCard) => {
-    let newCards = [...cards, newCard];
-    setCards(newCards);
-  };
+  });
 
   useEffect(() => {
     authService.onAuthChange((user) => {
@@ -63,12 +58,33 @@ const Maker_page = ({ authService }) => {
     });
   });
 
+  const createOrUpdateCard = (card) => {
+    setCards((prevCards) => {
+      const updated = { ...prevCards };
+      updated[card.id] = card;
+      return updated;
+    });
+  };
+
+  const deleteCard = (card) => {
+    setCards((prevCards) => {
+      const updated = { ...prevCards };
+      delete updated[card.id];
+      return updated;
+    });
+  };
+
   return (
     <section className={styles.makerBackground}>
       <section className={styles.makerPage}>
         <Header onLogout={onLogout} />
         <section className={styles.makerContents}>
-          <CardMaker cards={cards} onAdd={onAdd} />
+          <CardMaker
+            cards={cards}
+            onAdd={createOrUpdateCard}
+            updateCard={createOrUpdateCard}
+            deleteCard={deleteCard}
+          />
           <CardPreview cards={cards} />
         </section>
         <Footer />

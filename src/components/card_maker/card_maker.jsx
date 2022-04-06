@@ -4,12 +4,19 @@ import React from 'react';
 import CardEditForm from '../card_edit_form/card_edit_form';
 import CardAddForm from '../card_add_form/card_add_form';
 
-const CardMaker = ({ cards, onAdd }) => {
+const CardMaker = ({ cards, onAdd, updateCard, deleteCard }) => {
   return (
     <article className={styles.cardMaker}>
       <h2 className={styles.contentTitle}>Card Maker</h2>
-      {cards.map((card) => {
-        return <CardEditForm card={card} key={card.id} />;
+      {Object.keys(cards).map((key) => {
+        return (
+          <CardEditForm
+            card={cards[key]}
+            key={key}
+            updateCard={updateCard}
+            deleteCard={deleteCard}
+          />
+        );
       })}
       <CardAddForm onAdd={onAdd} />
     </article>
