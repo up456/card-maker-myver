@@ -16,31 +16,37 @@ const Maker_page = ({ authService }) => {
 
   const [cards, setCards] = useState([
     {
+      id: '1',
       name: '용석',
       company: '카카오',
-      light: 'Dark',
+      theme: 'Dark',
       title: '프론트엔드',
       email: '4up456@naver.com',
       message: '안녕하세요. 존잘남 박용석입니다.',
-      image: '/public/images/default_logo.png',
+      fileURL: '/images/logo.png',
+      fileName: 'default',
     },
     {
+      id: '2',
       name: '트위치',
       company: '라이엇',
-      light: 'Dark',
+      theme: 'Light',
       title: '원거리 암살자',
       email: 'tiwitch@naver.com',
       message: '깜짝 놀랬징?',
-      image: '/public/images/default_logo.png',
+      imageURL: null,
+      imageName: 'default',
     },
     {
+      id: '3',
       name: '아이유',
       company: '로엔',
-      light: 'Colorful',
+      theme: 'Colorful',
       title: '아이돌 여가수',
       email: 'iu@naver.com',
       message: '존예 여가수~!',
-      image: '/public/images/default_logo.png',
+      imageURL: null,
+      imageName: 'default',
     },
   ]);
 
