@@ -7,7 +7,7 @@ import { useEffect, useState } from 'react/cjs/react.development';
 import CardMaker from '../card_maker/card_maker';
 import CardPreview from '../card_preview/card_preview';
 
-const Maker_page = ({ authService }) => {
+const Maker_page = ({ FileInput, authService }) => {
   const navigate = useNavigate();
   const onLogout = () => {
     authService.logout();
@@ -24,7 +24,7 @@ const Maker_page = ({ authService }) => {
       email: '4up456@naver.com',
       message: '안녕하세요. 존잘남 박용석입니다.',
       fileURL: '/images/logo.png',
-      fileName: 'default',
+      fileName: '',
     },
     2: {
       id: '2',
@@ -35,7 +35,7 @@ const Maker_page = ({ authService }) => {
       email: 'tiwitch@naver.com',
       message: '깜짝 놀랬징?',
       imageURL: null,
-      fileName: 'default',
+      fileName: '',
     },
     3: {
       id: '3',
@@ -46,7 +46,7 @@ const Maker_page = ({ authService }) => {
       email: 'iu@naver.com',
       message: '존예 여가수~!',
       imageURL: null,
-      fileName: 'default',
+      fileName: '',
     },
   });
 
@@ -84,6 +84,7 @@ const Maker_page = ({ authService }) => {
             onAdd={createOrUpdateCard}
             updateCard={createOrUpdateCard}
             deleteCard={deleteCard}
+            FileInput={FileInput}
           />
           <CardPreview cards={cards} />
         </section>

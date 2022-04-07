@@ -4,7 +4,7 @@ import React from 'react';
 import CardEditForm from '../card_edit_form/card_edit_form';
 import CardAddForm from '../card_add_form/card_add_form';
 
-const CardMaker = ({ cards, onAdd, updateCard, deleteCard }) => {
+const CardMaker = ({ FileInput, cards, onAdd, updateCard, deleteCard }) => {
   return (
     <article className={styles.cardMaker}>
       <h2 className={styles.contentTitle}>Card Maker</h2>
@@ -15,10 +15,11 @@ const CardMaker = ({ cards, onAdd, updateCard, deleteCard }) => {
             key={key}
             updateCard={updateCard}
             deleteCard={deleteCard}
+            FileInput={FileInput}
           />
         );
       })}
-      <CardAddForm onAdd={onAdd} />
+      <CardAddForm FileInput={FileInput} onAdd={onAdd} />
     </article>
   );
 };
