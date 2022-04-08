@@ -6,8 +6,8 @@ import CardAddForm from '../card_add_form/card_add_form';
 
 const CardMaker = ({ FileInput, cards, onAdd, updateCard, deleteCard }) => {
   return (
-    <article className={styles.cardMaker}>
-      <h2 className={styles.contentTitle}>Card Maker</h2>
+    <article className={styles.editor}>
+      <h2 className={styles.title}>Card Maker</h2>
       {Object.keys(cards).map((key) => {
         return (
           <CardEditForm

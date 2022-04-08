@@ -6,8 +6,11 @@
 }
 .cardPreview {
   background-color: makerWhite;
-  width: 50%;
+  width: 100%;
+  height: 100%;
+  overflow-y: scroll;
   border-left: 1px solid makerLightGrey;
+  flex: 1;
 }
 
 .previewList {
@@ -19,7 +22,6 @@
 
 @media (max-width: mediaQuery) {
   .cardPreview {
-    width: 100%;
     border: none;
   }
 }

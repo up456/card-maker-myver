@@ -1,22 +1,16 @@
 @value makerLightGrey, makerWhite, makerGreen, makerGrey from '/src/common/colors.css';
 @value mediaQuery from '/src/common/size.css';
 
-* {
-}
-input {
-  border: 1px solid makerGrey;
-}
-.contentTitle {
-  color: makerGreen;
-}
-.cardMaker {
-  background-color: makerWhite;
-  width: 50%;
-  padding: 0 1em;
+.editor {
+  flex-basis: 50%;
+  border-right: 1px solid makerLightGrey;
+  padding: 0.5em 2em;
+  overflow-y: scroll;
 }
 
-@media (max-width: mediaQuery) {
-  .cardMaker {
-    width: 100%;
-  }
+.title {
+  width: 100%;
+  text-align: center;
+  margin-bottom: 1em;
+  color: makerGreen;
 }
